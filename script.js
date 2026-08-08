@@ -26,7 +26,7 @@ const shipments = {
     to:"Ban Phai, Khon Kaen - 40110",
     receiverName:"Anurak Kulcharasprasort",
     receiverAddress:"14 Ban Pa Po, Tambon Pa Po, Amphoe Ban Phai, Khon Kaen Province 40110, Thailand",
-    parcelDetails:"Registered Parcel — Personal Documents",
+    parcelDetails:"Registered Money $1000",
     service:"Registered Parcel",
     weight:"0.20 kg",
     booking:"08 Aug 2026",
