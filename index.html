@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangladesh Parcel Tracking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a href="https://bdpost.gov.bd/" class="logo-link" aria-label="Bangladesh Parcel Tracking Home">
+      <div class="logo-mark">
+        <a href="https://bdpost.gov.bd/" class="logo-mark" target="_blank" rel="noopener noreferrer">
+    <img src="ban.png" alt="Bangladesh Parcel Tracking Logo">
+</a>
+      </div>
+      <div>
+        <strong>বাংলাদেশ পার্সেল ট্র্যাকিং</strong>
+        <span>Bangladesh Parcel Tracking Service</span>
+      </div>
+    </a>
+    <div class="nav-right">
+  <a href="https://bdpost.gov.bd/">Home</a>
+  <a href="https://bdpost.gov.bd/pages/static-pages/6922dca3933eb65569e11640">Tracking</a>
+  <a href="https://bdpost.gov.bd/pages/static-pages/6922dc9d933eb65569e114be">Help</a>
+</div>
+  </div>
+</header>
+
+<section id="trackingScreen" class="tracking-screen">
+  <div class="container tracking-container">
+    <div class="official-strip">Parcel &amp; EMS Tracking Portal</div>
+    <h1>Track Your Parcel</h1>
+    <p>Enter your tracking number to check the current delivery status of your parcel.</p>
+
+    <div class="track-box">
+      <label for="trackingInput">Tracking Number</label>
+      <div class="search-row">
+        <input id="trackingInput" type="text" autocomplete="off" placeholder="Enter tracking number">
+        <button id="trackBtn">Track Parcel</button>
+      </div>
+      <div class="hint">Example: <b>BD40260808007</b></div>
+      <div id="error" class="error"></div>
+    </div>
+
+    <div class="info-row">
+      <div><b>01</b><span>Enter Tracking Number</span></div>
+      <div><b>02</b><span>Click Track Parcel</span></div>
+      <div><b>03</b><span>View Delivery Status</span></div>
+    </div>
+  </div>
+</section>
+
+<main id="detailsScreen" class="details-screen hidden">
+  <section class="container content">
+
+    <button id="backBtn" class="back-btn">← Track another parcel</button>
+
+    <div class="status-head">
+      <div>
+        <span class="eyebrow">Shipment Details</span>
+        <h2 id="statusTitle">In Transit</h2>
+      </div>
+      <div class="tracking-badge">
+        <span>Tracking No.</span>
+        <strong id="trackingNo"></strong>
+      </div>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-line"><div id="progressFill"></div></div>
+      <div class="steps">
+        <div class="step" data-step="1"><div class="dot">1</div><span>Booked</span><small id="date1"></small></div>
+        <div class="step" data-step="2"><div class="dot">2</div><span>Dispatched</span><small id="date2"></small></div>
+        <div class="step" data-step="3"><div class="dot">3</div><span>In Transit</span><small id="date3"></small></div>
+        <div class="step" data-step="4"><div class="dot">4</div><span>At Delivery Office</span><small id="date4"></small></div>
+        <div class="step" data-step="5"><div class="dot">5</div><span>Delivered</span><small id="date5"></small></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="card-title"><span class="icon">▣</span> Sender &amp; Receiver</div>
+        <div class="address">
+          <div><span>From</span><strong id="from"></strong></div>
+          <div class="arrow">↓</div>
+          <div><span>To</span><strong id="to"></strong></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-title"><span class="icon">▤</span> Parcel Information</div>
+        <div class="details">
+          <div><span>Service</span><strong id="service"></strong></div>
+          <div><span>Weight</span><strong id="weight"></strong></div>
+          <div><span>Booking Date</span><strong id="booking"></strong></div>
+          <div><span>Expected Delivery</span><strong id="expected"></strong></div>
+        </div>
+      </article>
+    </div>
+
+    <article class="card receiver-card">
+      <div class="card-title"><span class="icon">👤</span> Receiver Information</div>
+      <div class="receiver-info">
+        <div class="receiver-field">
+          <span>Receiver Name</span>
+          <strong id="receiverName"></strong>
+        </div>
+        <div class="receiver-field">
+          <span>Full Address</span>
+          <strong id="receiverAddress"></strong>
+        </div>
+        <div class="receiver-field">
+          <span>Parcel Details</span>
+          <strong id="parcelDetails"></strong>
+        </div>
+      </div>
+    </article>
+
+    <article class="card history-card">
+      <div class="card-title"><span class="icon">◷</span> Tracking History</div>
+      <div id="history"></div>
+    </article>
+
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <div>
+      <strong>Bangladesh Parcel Tracking Service</strong><br>
+      <span>An official government website.</span>
+    </div>
+    <div>© 2026 Parcel Tracking</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
